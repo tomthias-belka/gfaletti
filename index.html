@@ -1,80 +1,84 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giordano Faletti - Mountain Guide</title>
+    <title>Giordano Faletti | UIAGM Mountain Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+        .font-serif {
+            font-family: 'Playfair+Display', serif;
+        }
+        .text-accent {
+            color: #44ADC2;
+        }
+        .bg-accent {
+            background-color: #44ADC2;
+        }
+        .border-accent {
+            border-color: #44ADC2;
+        }
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a0a0a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #333;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #44ADC2;
+        }
+
+        /* Page Transition Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-page-entry {
+            animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            will-change: transform, opacity;
+        }
+
+        /* Custom transitions for magazine feel */
+        .reveal-content {
+            opacity: 0;
+            animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.12.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.37.0"
+  }
+}
+</script>
 </head>
-
 <body>
-    <nav>
-        <div class="nav-container">
-            <a href="index.html" class="nav-logo">GIORDANO FALETTI</a>
-            <div class="nav-right">
-                <ul class="nav-links">
-                    <li><a href="routes.html">Routes</a></li>
-                    <li><a href="courses.html">Courses</a></li>
-                    <li><a href="expeditions.html">Expeditions</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-                <button class="dark-mode-toggle" id="darkModeToggle" title="Toggle dark mode"
-                    aria-label="Toggle dark mode">
-                    <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
-                    </svg>
-                </button>
-            </div>
-        </div>
-    </nav>
-
-    <main class="page-container">
-        <section class="hero-content">
-            <h1>Giordano Faletti</h1>
-            <p class="subtitle">Mountain Guide · Alpine Experiences</p>
-            <div style="font-size: 13px; color: var(--color-text-light); margin-bottom: var(--space-48); letter-spacing: 0.3px;">
-                UIAGM Certified | 28+ Years Experience
-            </div>
-            <div class="hero-cta">
-                <a href="routes.html" class="btn btn-primary">View Routes</a>
-                <a href="contact.html" class="btn btn-secondary">Inquire</a>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2025</p>
-    </footer>
-
-    <script>
-        const darkModeToggle = document.getElementById('darkModeToggle');
-
-        const sunIcon = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>`;
-        const moonIcon = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>`;
-
-        function updateThemeIcon(isDark) {
-            darkModeToggle.innerHTML = isDark ? sunIcon : moonIcon;
-        }
-
-        darkModeToggle.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-            const isDark = document.body.classList.contains('dark-mode');
-            localStorage.setItem('darkMode', isDark);
-            updateThemeIcon(isDark);
-        });
-
-        if (localStorage.getItem('darkMode') === 'true') {
-            document.body.classList.add('dark-mode');
-            updateThemeIcon(true);
-        }
-    </script>
+    <div id="root"></div>
+    <script type="module" src="./index.tsx"></script>
 </body>
-
 </html>

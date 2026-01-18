@@ -1,0 +1,22 @@
+
+<svg width="200" height="920" viewBox="0 0 200 920" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="68" cy="689" r="10" fill="#44ADC2" stroke="#000" stroke-width="1.5"/>
+  <circle cx="108" cy="387" r="10" fill="#44ADC2" stroke="#000" stroke-width="1.5"/>
+  <circle cx="86" cy="162" r="10" fill="#44ADC2" stroke="#000" stroke-width="1.5"/>
+  <circle cx="113" cy="25" r="10" fill="#44ADC2" stroke="#000" stroke-width="1.5"/>
+  
+  <text x="130" y="240" fill="#44ADC2" font-family="Inter, sans-serif" font-weight="900" font-size="18">7b</text>
+  <text x="130" y="255" fill="#44ADC2" font-family="Inter, sans-serif" font-weight="600" font-size="11">30m</text>
+  
+  <text x="125" y="395" fill="#44ADC2" font-family="Inter, sans-serif" font-weight="900" font-size="18">7c</text>
+  <text x="125" y="410" fill="#44ADC2" font-family="Inter, sans-serif" font-weight="600" font-size="11">30m</text>
+  
+  <text x="105" y="585" fill="#44ADC2" font-family="Inter, sans-serif" font-weight="900" font-size="18">7c</text>
+  <text x="105" y="600" fill="#44ADC2" font-family="Inter, sans-serif" font-weight="600" font-size="11">40m</text>
+  
+  <text x="110" y="865" fill="#44ADC2" font-family="Inter, sans-serif" font-weight="900" font-size="18">7b+</text>
+  <text x="110" y="880" fill="#44ADC2" font-family="Inter, sans-serif" font-weight="600" font-size="11">25m</text>
+
+  <path d="M70 888C70 888 70 880 70 870C70 862 71 860 71 858C72 856 72 853 72 851C73 849 75 847 78 842C80 839 81 837 82 834C86 827 87 825 89 822C91 820 92 816 95 806C96 801 96 798 95 795C94 792 94 789 95 785C95 784 95 784 95 784C94 782 92 781 90 780C88 778 86 776 84 774C80 771 78 769 76 767C74 764 71 761 70 759C69 757 69 755 69 748C69 746 69 744 69 737C69 729 69 723 69 721C70 717 69 713 70 712C71 705 70 692 69 690" stroke="#44ADC2" stroke-width="6" stroke-linecap="round"/>
+  <path d="M69 446C69 446 72 441 73 439C74 437 74 437 75 436C75 435 76 434 77 432C77 431 77 431 78 429C78 427 80 425 80 423C81 421 82 418 84 415C86 412 87 409 88 407C89 405 89 403 90 402C90 400 91 398 92 397C94 396 96 395 100 392C101 391 102 391 103 390C103 390 103 388 104 388C105 387 106 386 108 385C109 385 109 383 111 381C113 378 113 377 113 375C113 374 113 373 112 372C112 371 111 370 109 366" stroke="#44ADC2" stroke-width="6" stroke-linecap="round"/>
+</svg>
